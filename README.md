@@ -1,4 +1,4 @@
-# task_manager
+# Task Manager
 
 The UI implemenation of task manager dribble's shot in Flutter.
 
