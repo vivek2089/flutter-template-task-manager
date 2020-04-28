@@ -1,8 +1,13 @@
 # task_manager
 
-The UI implemenation of dribble shot in Flutter.
+The UI implemenation of task manager dribble's shot in Flutter.
 
-Resources:
+# Screenshots:
+![Home_screen](https://github.com/vivek2089/flutter-template-task-manager/blob/master/screenshots/home_screen.PNG)
+
+![Task_screen](https://github.com/vivek2089/flutter-template-task-manager/blob/master/screenshots/task_screen.PNG)
+
+Details:
 * App in action (screen recording): https://drive.google.com/open?id=1Nqs5HQbDYtvqttaeyQAfWtpqclcv3tzL
 * Dribble shot: https://dribbble.com/shots/11007749-Task-manager-Mobile-App
 * The user image from flaticon:
