@@ -12,12 +12,12 @@ class TaskThumbnail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(20),
+      padding: const EdgeInsets.all(20),
       width: 250,
       height: 250,
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.all(Radius.circular(30)),
+        borderRadius: const BorderRadius.all(Radius.circular(30)),
         border: Border.all(color: Colors.black12, width: 2),
       ),
       child: Column(
@@ -30,18 +30,18 @@ class TaskThumbnail extends StatelessWidget {
                 task.title,
                 style: Theme.of(context).textTheme.titleMedium,
               ),
-              Icon(
+              const Icon(
                 Icons.bubble_chart,
                 color: Colors.black,
               )
             ],
           ),
-          SizedBox(height: 5),
+          const SizedBox(height: 5),
           Text(
             task.description,
             style: Theme.of(context).textTheme.bodyMedium,
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           FittedBox(
             fit: BoxFit.fitWidth,
             child: Attendees(
@@ -49,7 +49,7 @@ class TaskThumbnail extends StatelessWidget {
               backgroudColor: Colors.white,
             ),
           ),
-          Spacer(),
+          const Spacer(),
           Align(
             alignment: Alignment.bottomLeft,
             child: Container(
@@ -71,8 +71,8 @@ class TaskThumbnail extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 5),
-                  LinearProgressIndicator(
+                  const SizedBox(height: 5),
+                  const LinearProgressIndicator(
                     value: 0.35,
                     backgroundColor: MyColors.lightGray,
                   ),

@@ -35,11 +35,11 @@ class Tasks extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Container(
-          padding: EdgeInsets.only(bottom: 10),
+          padding: const EdgeInsets.only(bottom: 10),
           child: Text("My tasks", style: Theme.of(context).textTheme.headlineSmall),
         ),
         _buildTimeline(context),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         TaskThumbnails(),
       ],
     );
