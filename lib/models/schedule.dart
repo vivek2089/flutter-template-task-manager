@@ -27,7 +27,7 @@ class Schedule {
     DateTime firstDay = DateTime(today.year, today.month, 1);
     //todo: month can be 12.
     DateTime lastDayOfMonth = DateTime(today.year, today.month + 1, 0);
-    List<Schedule> schedules = List.empty();
+    List<Schedule> schedules = List.empty(growable: true);
     for (int i = 0; i <= lastDayOfMonth.difference(firstDay).inDays; i++) {
       DateTime now = firstDay.add(Duration(days: i));
       bool isToday = _isSameDate(now);

@@ -55,7 +55,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 const TimeTracker(),
-                Tasks(),
+                // Tasks(),
               ],
             ),
           ),

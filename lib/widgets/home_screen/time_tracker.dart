@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:task_manager/screens/tasks_screen.dart';
 
 import '../../config.dart';
 import '../../screens/tasks_screen.dart';
@@ -7,7 +6,7 @@ import '../../screens/tasks_screen.dart';
 class TimeTracker extends StatelessWidget {
   const TimeTracker({
     super.key,
-  };
+  });
 
   @override
   Widget build(BuildContext context) {
