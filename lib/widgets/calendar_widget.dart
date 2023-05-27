@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:task_manager/models/schedule.dart';
-
 import '../config.dart';
+import '../models/schedule.dart';
 
 class Calendar extends StatelessWidget {
-  Calendar({Key key}) : super(key: key);
+  Calendar({super.key});
 
   final List<Schedule> schedules = Schedule.sample();
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 80,
       width: MediaQuery.of(context).size.width,
       child: ListView.builder(
@@ -18,12 +17,12 @@ class Calendar extends StatelessWidget {
           itemCount: schedules.length,
           itemBuilder: (context, index) {
             Schedule schedule = schedules[index];
-            TextStyle style = schedule.isToday
+            TextStyle? style = schedule.isToday
                 ? Theme.of(context)
                     .textTheme
-                    .caption
-                    .copyWith(color: MyColors.mustard)
-                : Theme.of(context).textTheme.caption;
+                    .bodySmall
+                    ?.copyWith(color: MyColors.mustard)
+                : Theme.of(context).textTheme.bodySmall;
             return InkWell(
               onTap: () {},
               child: Column(
@@ -43,7 +42,7 @@ class Calendar extends StatelessWidget {
                     alignment: Alignment.center,
                     child: Text(
                       schedule.date.toString(),
-                      style: style.copyWith(height: 1.5),
+                      style: style?.copyWith(height: 1.5),
                     ),
                   ),
                 ],

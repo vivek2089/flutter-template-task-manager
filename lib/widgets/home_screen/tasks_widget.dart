@@ -10,7 +10,7 @@ class Tasks extends StatelessWidget {
   Row _buildTimeline(BuildContext context) {
     List<String> times = ["Recently", "Today", "Upcoming", "Later"];
     List<Widget> widgets = List<Widget>();
-    TextStyle style = Theme.of(context).textTheme.title;
+    TextStyle style = Theme.of(context).textTheme.titleLarge;
     for (var i = 0; i < times.length; i++) {
       widgets.add(InkWell(
         onTap: () {
@@ -35,11 +35,11 @@ class Tasks extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Container(
-          padding: EdgeInsets.only(bottom: 10),
-          child: Text("My tasks", style: Theme.of(context).textTheme.headline),
+          padding: const EdgeInsets.only(bottom: 10),
+          child: Text("My tasks", style: Theme.of(context).textTheme.headlineSmall),
         ),
         _buildTimeline(context),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         TaskThumbnails(),
       ],
     );

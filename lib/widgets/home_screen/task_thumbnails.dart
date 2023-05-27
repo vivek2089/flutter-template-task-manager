@@ -12,11 +12,11 @@ class TaskThumbnails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: MediaQuery.of(context).size.width,
       height: 260,
       child: ListView.separated(
-          separatorBuilder: (context, index) => SizedBox(width: 30),
+          separatorBuilder: (context, index) => const SizedBox(width: 30),
           scrollDirection: Axis.horizontal,
           itemCount: tasks.length,
           itemBuilder: (context, index) {

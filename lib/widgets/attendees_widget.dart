@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '../config.dart';
-
 class Attendees extends StatelessWidget {
   const Attendees({
-    Key key,
-    @required this.border,
-    @required this.backgroudColor,
-  }) : super(key: key);
+    super.key,
+    required this.border,
+    required this.backgroudColor,
+  });
 
   final Color backgroudColor;
   final Border border;
@@ -26,18 +24,17 @@ class Attendees extends StatelessWidget {
             ),
         transform: Matrix4.translationValues(-5 * index, 0, 0),
         child: ClipOval(
-            child: Image.asset(
-          entry.value,
-          width: 45,
-        )),
+          child: Image.asset(
+            entry.value,
+            width: 45,
+          ),
+        ),
       );
       index = index + 3;
       return widget;
     }).toList();
-    return Container(
-      child: Row(
-        children: attendeesWidget,
-      ),
+    return Row(
+      children: attendeesWidget,
     );
   }
 }

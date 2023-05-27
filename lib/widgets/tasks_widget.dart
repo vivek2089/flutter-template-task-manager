@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:task_manager/models/task_detail.dart';
-
 import '../config.dart';
+import '../models/task_detail.dart';
 import 'task_widget.dart';
 
 class Tasks extends StatelessWidget {
-  Tasks({Key key}) : super(key: key);
+  Tasks({super.key});
 
   final List<TaskDetail> _details = TaskDetail.sample();
 
@@ -25,21 +24,21 @@ class Tasks extends StatelessWidget {
           );
           return Container(
             decoration: index == _details.length - 1 ? null : decoration,
-            margin: EdgeInsets.only(left: 10),
+            margin: const EdgeInsets.only(left: 10),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Container(
                   //height: 30,
                   transform: Matrix4.translationValues(-13.0, -1, 0),
-                  child: Icon(
+                  child: const Icon(
                     Icons.error,
                     color: MyColors.mustard,
                   ),
                 ),
                 Container(
                   //height: 150,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     border: Border(
                       left: BorderSide(color: MyColors.mustard, width: 3),
                     ),
