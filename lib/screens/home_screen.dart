@@ -36,24 +36,24 @@ class HomeScreen extends StatelessWidget {
             children: <Widget>[
               Text("Hello, Jessika!",
                   style: Theme.of(context).textTheme.titleLarge),
-              // Text("You've got \n8 tasks today",
-              //     style: Theme.of(context).textTheme.headlineSmall),
-              // Container(
-              //   margin: const EdgeInsets.only(top: 25),
-              //   padding: const EdgeInsets.all(20),
-              //   decoration: BoxDecoration(
-              //     color: Colors.black12,
-              //     borderRadius: BorderRadius.circular(15),
-              //   ),
-              //   child: const Row(
-              //     children: <Widget>[
-              //       Icon(Icons.search),
-              //       SizedBox(width: 5),
-              //       Text("Search something..."),
-              //     ],
-              //   ),
-              // ),
-              // const TimeTracker(),
+              Text("You've got \n8 tasks today",
+                  style: Theme.of(context).textTheme.headlineSmall),
+              Container(
+                margin: const EdgeInsets.only(top: 25),
+                padding: const EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  color: Colors.black12,
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: const Row(
+                  children: <Widget>[
+                    Icon(Icons.search),
+                    SizedBox(width: 5),
+                    Text("Search something..."),
+                  ],
+                ),
+              ),
+              const TimeTracker(),
               Expanded(
                 child: Tasks(),
               ),
